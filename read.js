@@ -1,34 +1,34 @@
 //阅读控件(字体大小，字体粗细，字体family，背景颜色，全屏缩屏)
 //字体大小
-          var oPtxt=document.getElementById("timu");
+          var oPtxt=document.getElementById("content");
           var oBtn1=document.getElementById("Btn1");
           var oBtn2=document.getElementById("Btn2");
 if(!localStorage.zitidaxiao)
 {var num=22;
-document.getElementById("timu").style.fontSize=num+'px';}
+document.getElementById("content").style.fontSize=num+'px';}
 else
-{document.getElementById("timu").style.fontSize=localStorage.zitidaxiao;
+{document.getElementById("content").style.fontSize=localStorage.zitidaxiao;
           var num=parseInt(localStorage.zitidaxiao);}
           oBtn1.onclick = function(){
               num++;
               oPtxt.style.fontSize=num+'px';
-localStorage.zitidaxiao=document.getElementById("timu").style.fontSize;
+localStorage.zitidaxiao=document.getElementById("content").style.fontSize;
          };
          oBtn2.onclick = function(){
              num--;
              oPtxt.style.fontSize=num+'px';
-localStorage.zitidaxiao=document.getElementById("timu").style.fontSize;
+localStorage.zitidaxiao=document.getElementById("content").style.fontSize;
          }
 
 //字体粗细
 if(localStorage.jiacu)
-document.getElementById("timu").style.fontWeight=localStorage.jiacu;
+document.getElementById("content").style.fontWeight=localStorage.jiacu;
 function jiacu(){
-if(document.getElementById("timu").style.fontWeight!="611")
-{document.getElementById("timu").style.fontWeight="611";
+if(document.getElementById("content").style.fontWeight!="611")
+{document.getElementById("content").style.fontWeight="611";
 localStorage.jiacu="611";}
 else
-{document.getElementById("timu").style.fontWeight="normal";
+{document.getElementById("content").style.fontWeight="normal";
 localStorage.jiacu="normal";}
 }
 
@@ -36,10 +36,10 @@ localStorage.jiacu="normal";}
 if(!localStorage.ziti)
 {localStorage.ziti="SimSun";
 localStorage.zitiname="宋体";
-document.getElementById("timu").style.fontFamily=localStorage.ziti;
+document.getElementById("content").style.fontFamily=localStorage.ziti;
 document.getElementById("ziti").innerHTML=localStorage.zitiname;}
 else
-{document.getElementById("timu").style.fontFamily=localStorage.ziti;
+{document.getElementById("content").style.fontFamily=localStorage.ziti;
 document.getElementById("ziti").innerHTML=localStorage.zitiname;}
 function ziti(){
 if(localStorage.ziti=="SimSun")
@@ -51,7 +51,7 @@ localStorage.ziti="KaiTi";}
 else
 {localStorage.zitiname="宋体";
 localStorage.ziti="SimSun";}
-document.getElementById("timu").style.fontFamily=localStorage.ziti;
+document.getElementById("content").style.fontFamily=localStorage.ziti;
 document.getElementById("ziti").innerHTML=localStorage.zitiname;
 }
     if(document.body.scrollWidth < 700){
@@ -61,12 +61,12 @@ document.getElementById("ziti").innerHTML=localStorage.zitiname;
 //背景颜色
 if (!localStorage.bg)
 {localStorage.bg="#18222d";
-localStorage.timu="#adadad";
+localStorage.content="#adadad";
 document.getElementById("bg").style.backgroundColor=localStorage.bg;
-document.getElementById("timu").style.color=localStorage.timu;}
+document.getElementById("content").style.color=localStorage.content;}
 else
 {document.getElementById("bg").style.backgroundColor=localStorage.bg;
-document.getElementById("timu").style.color= localStorage.timu;}
+document.getElementById("content").style.color= localStorage.content;}
 function bg(){
 if(localStorage.bg=="#ffffff")
 localStorage.bg="#f6f1e7";
@@ -78,12 +78,12 @@ else if(localStorage.bg=="#dae9da")
 localStorage.bg="#ebcece";
 else if(localStorage.bg=="#ebcece")
 {localStorage.bg="#18222d";
-localStorage.timu= "#adadad";
-document.getElementById("timu").style.color= localStorage.timu;}
+localStorage.content= "#adadad";
+document.getElementById("content").style.color= localStorage.content;}
 else if(localStorage.bg=="#18222d")
 {localStorage.bg="#ebddae";
-localStorage.timu= "";
-document.getElementById("timu").style.color=localStorage.timu;}
+localStorage.content= "";
+document.getElementById("content").style.color=localStorage.content;}
 else if(localStorage.bg=="#ebddae")
 localStorage.bg="#dfecf0";
 else
