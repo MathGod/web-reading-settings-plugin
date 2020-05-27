@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+   <title>自适应网站阅读设置控件</title>
+</head>
+
+<body style="margin: 0px;">
+
+  <div id="bg" style="width:100%;height:100%;">
+
+    <!--阅读设置控件-->
+    <div style="padding:5px 5px 1px 5px;">
+      <button class="kongjian" style="width:50px;" onclick="return ExecuteFun(this)" >全屏</button> 
+      <button class="kongjian" id="bgc"  style="width: 50px;" onclick="bg();">背景</button>
+      <button class="kongjian" id="ziti"  style="width:50px;" onclick="ziti();" >字体</button>
+      <button class="kongjian" onclick="jiacu()"><b>B</b></button>
+      <button class="kongjian" id="Btn2"  value="A-">A-</button>
+      <button class="kongjian" id="Btn1" value="A+">A+</button>
+      <hr style="margin: 3px;">
+    </div>
+
+   <div id="read">网站正文</div>
+
+ </div>       
+
+ <script type="text/javascript" src="read.js"></script>
+</body>
+</html>
