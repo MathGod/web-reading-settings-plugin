@@ -54,7 +54,7 @@ localStorage.ziti="SimSun";}
 document.getElementById("content").style.fontFamily=localStorage.ziti;
 document.getElementById("ziti").innerHTML=localStorage.zitiname;
 }
-    if(document.body.scrollWidth < 700){
+    if(document.body.scrollWidth < 650){
       document.getElementById('ziti').style.display = 'none';
     }
 
@@ -90,6 +90,36 @@ else
 localStorage.bg="#ffffff";
 document.getElementById("bg").style.backgroundColor=localStorage.bg;
 }
+
+//屏宽
+if (!localStorage.pingkuan){
+     localStorage.pingkuan="700px";
+     document.getElementById("content").style.maxWidth=localStorage.pingkuan;
+    }
+    else {     document.getElementById("content").style.maxWidth=localStorage.pingkuan;}
+
+function pingkuan(){
+if(localStorage.pingkuan=="700px")
+	localStorage.pingkuan="800px";
+else if(localStorage.pingkuan=="800px")
+	localStorage.pingkuan="900px";
+else if(localStorage.pingkuan=="900px")
+		localStorage.pingkuan="1000px";
+else if(localStorage.pingkuan=="1000px")
+		localStorage.pingkuan="1100px";
+else if(localStorage.pingkuan=="1100px")
+		localStorage.pingkuan="1200px";
+else if(localStorage.pingkuan=="1200px")
+		localStorage.pingkuan="100%";
+else if(localStorage.pingkuan=="100%")
+		localStorage.pingkuan="600px";
+else if(localStorage.pingkuan=="600px")
+		localStorage.pingkuan="700px";
+   document.getElementById("content").style.maxWidth=localStorage.pingkuan;
+}
+    if(document.body.scrollWidth < 600){
+      document.getElementById('pingkuan').style.display = 'none';
+    }
 
 //全屏
      function ExecuteFun(a) {
