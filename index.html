@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <title>自适应网站阅读设置控件</title>
   <style>
+body{margin: 0;}
    .kongjian{
              width:34px;
              height:26px;
@@ -14,35 +15,31 @@
              float:right;
              background-color:transparent;
              color:#9E9E9E;}
+
   </style>
 </head>
+ <!--加id="bg"控制背景颜色-->
+<body id="bg">
+<!--网站标题和控件栏-->
+            <a href="/" style="text-decoration: none;font-size:18px;margin-left:3px;color:#9E9E9E;"><i><b>网站名称</b></i></a>
+            <button class="kongjian" style="width:50px;" onclick="return ExecuteFun(this)" >全屏</button>
+            <button class="kongjian" id="pingkuan" style="width:50px;" onclick="pingkuan();" >屏宽</button>
+            <button class="kongjian" style="width: 50px;" onclick="bg();">背景</button>
+            <button class="kongjian" id="ziti"  style="width:50px;" onclick="ziti();" >字体</button>
+            <button class="kongjian" onclick="jiacu()"><b>B</b></button>
+            <button class="kongjian" id="Btn2"  value="A-">A-</button>
+            <button class="kongjian" id="Btn1" value="A+">A+</button>
+            <hr style="margin: 3px;">
 
-<body style="margin: 0px;">
 
-  <div id="bg" style="width:100%;height:100%;position:absolute">
+       <!--加id="content"控制字体-->
+       <div id="content" style="margin: 0 auto;">
+       网站阅读设置控件。按键调节字体大小，粗细，宋楷黑体，背景颜色，屏幕宽度，全屏缩屏。电脑端移动端自适应，刷新保存设置。Q群7954 76500欢迎加入交流，作者QQ374162745。
+       </div>
 
-    <!--阅读设置控件-->
-    <div style="padding:5px 5px 1px 5px;">
-      <a href="/" style="text-decoration: none;font-size:19px;margin-left: 4px;color:#9E9E9E;"><i><b>网站名称</b></i></a>
-      <button class="kongjian" style="width:50px;" onclick="return ExecuteFun(this)" >全屏</button>
-      <button class="kongjian" id="pingkuan" style="width:50px;" onclick="pingkuan();" >屏宽</button>
-      <button class="kongjian" style="width: 50px;" onclick="bg();">背景</button>
-      <button class="kongjian" id="ziti"  style="width:50px;" onclick="ziti();" >字体</button>
-      <button class="kongjian" onclick="jiacu()"><b>B</b></button>
-      <button class="kongjian" id="Btn2"  value="A-">A-</button>
-      <button class="kongjian" id="Btn1" value="A+">A+</button>
-      <hr style="margin: 3px;">
-    </div>
 
-    <br><br><br>
 
-    <div id="content" style="margin: 0 auto;">
-正文内容<br><br>
-网站阅读设置控件。按键调节字体大小，粗细，宋楷黑体，背景颜色，屏幕宽度，全屏缩屏。电脑端移动端自适应，刷新保存设置。Q群7954 76500欢迎加入交流，作者QQ374162745。
-    </div>
-
- </div>       
-
- <script type="text/javascript" src="read.js"></script>
+<!--引入js-->
+<script type="text/javascript" src="read.js"></script>
 </body>
 </html>
