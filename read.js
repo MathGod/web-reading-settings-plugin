@@ -1,22 +1,19 @@
 //阅读控件(字体大小，字体粗细，字体family，背景颜色，全屏缩屏)
-          var oBtn1=document.getElementById("Btn1");
-          var oBtn2=document.getElementById("Btn2");
+//字体大小
 if(!localStorage.zitidaxiao)
-{var num=22;
-document.getElementById("content").style.fontSize=num+'px';}
+{localStorage.zitidaxiao="20";
+document.getElementById("content").style.fontSize=localStorage.zitidaxiao+'px';}
 else
-{document.getElementById("content").style.fontSize=localStorage.zitidaxiao;
-          var num=parseInt(localStorage.zitidaxiao);}
-          oBtn1.onclick = function(){
-              num++;
-document.getElementById("content").style.fontSize=num+'px';
-localStorage.zitidaxiao=document.getElementById("content").style.fontSize;
-         };
-         oBtn2.onclick = function(){
-             num--;
-document.getElementById("content").style.fontSize=num+'px';
-localStorage.zitidaxiao=document.getElementById("content").style.fontSize;
-         }
+document.getElementById("content").style.fontSize=localStorage.zitidaxiao+'px';    
+function zitibianda(){
+localStorage.zitidaxiao++;
+document.getElementById("content").style.fontSize=localStorage.zitidaxiao+'px';
+}
+function zitibianxiao(){
+localStorage.zitidaxiao--;
+document.getElementById("content").style.fontSize=localStorage.zitidaxiao+'px';
+}
+
 
 //字体粗细
 if(localStorage.jiacu)
