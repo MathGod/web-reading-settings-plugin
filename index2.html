@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>下拉菜单</title>
-<meta charset="utf-8">
-<style>
- body{margin: 0;}
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <title>此版本背景按钮改为下拉-自适应网站阅读设置控件</title>
+  <style>
+    body{margin: 0;}
 .kongjian{
     width: 34px;
     height: 26px;
@@ -13,7 +14,7 @@
     margin-right: 5px;
     background-color: transparent;
     color: #9E9E9E;
-float:right;
+    float:right;
 }
 
 .bgc-content a {
@@ -25,55 +26,61 @@ float:right;
 .bgc:hover .bgc-content a {
     display: block;
 }
-
-
 </style>
 </head>
-<body id="bg">
-      <a href="/" style="text-decoration: none;font-size:18px;margin-left:3px;color:#9E9E9E;"><i><b>网站名称</b></i></a>
-      <button class="kongjian" style="width:50px;" onclick="return ExecuteFun(this)" >全屏</button>
-      <button class="kongjian" id="pingkuan" style="width:50px;" onclick="pingkuan();" >屏宽</button>
-      <!--<button class="kongjian" style="width: 50px;" onclick="bg();">背景</button>-->
-      <div class="bgc" style="width: 50px;float:right;    margin-right: 5px;">
-      <button class="kongjian" style="width: 50px;float:none;">背景</button>
-        <div class="bgc-content" style="position: fixed;">
-          <a style="background-color:#dae9da;" onclick='bgc("#dae9da")'></a>
-          <a style="background-color:#ebcece;" onclick='bgc("#ebcece")' ></a>
-          <a style="background-color:#f6f1e7;" onclick='bgc("#f6f1e7")'></a>
-          <a style="background-color:#ebddae;" onclick='bgc("#ebddae")' ></a>
-          <a style="background-color:#dadada;" onclick='bgc("#dadada")' ></a>
-          <a style="background-color:#ffffff;" onclick='bgc("#ffffff")' ></a>
-          <a style="background-color:#18222d;" onclick='bgc("#18222d")' ></a>
-        </div>
-      </div>
-      <button class="kongjian" id="ziti"  style="width:50px;" onclick="ziti();" >字体</button>
-      <button class="kongjian" onclick="jiacu()"><b>B</b></button>
-      <button class="kongjian" onclick="zitibianxiao()">A-</button>
-      <button class="kongjian" onclick="zitibianda()">A+</button>
-      <hr style="margin: 3px;">
- 
+
+<body>
+<!--在body标签开始加入网站标题和控件按钮-->
+         <a href="/" style="text-decoration: none;font-size:18px;margin-left:3px;color:#9E9E9E;"><i><b>网站名称</b></i></a>
+         <button class="kongjian" style="width:50px;" onclick="return ExecuteFun(this)" >全屏</button>
+         <button class="kongjian" id="pingkuan" style="width:50px;" onclick="pingkuan();" >屏宽</button>
+         <div class="bgc" style="width: 50px;float:right;    margin-right: 5px;">
+         <button class="kongjian" style="width: 50px;float:none;">背景</button>
+         <div class="bgc-content" style="position: fixed;">
+         <a style="background-color:#dae9da;" onclick='bgc("#dae9da")'></a>
+         <a style="background-color:#ebcece;" onclick='bgc("#ebcece")' ></a>
+         <a style="background-color:#f6f1e7;" onclick='bgc("#f6f1e7")'></a>
+         <a style="background-color:#ebddae;" onclick='bgc("#ebddae")' ></a>
+         <a style="background-color:#dadada;" onclick='bgc("#dadada")' ></a>
+         <a style="background-color:#ffffff;" onclick='bgc("#ffffff")' ></a>
+         <a style="background-color:#18222d;" onclick='bgc("#18222d")' ></a>
+         </div>
+         </div>
+         <button class="kongjian" id="ziti"  style="width:50px;" onclick="ziti();" >字体</button>
+         <button class="kongjian" onclick="jiacu()"><b>B</b></button>
+         <button class="kongjian" onclick="zitibianxiao()">A-</button>
+         <button class="kongjian" onclick="zitibianda()">A+</button>
+         <hr style="margin: 3px;">
+
+
+<!--加id="content"。控制字体大小，粗细，宋楷黑体和屏幕宽度-->
        <div id="content" style="margin: 0 auto;">
        网站阅读设置控件。按键调节字体大小，粗细，宋楷黑体，背景颜色，屏幕宽度，全屏缩屏。电脑端移动端自适应，刷新保存设置。Q群7954 76500欢迎加入交流，作者QQ374162745。
        </div>
+
+<!--此为背景选择js代码，代替read.js中的背景切换代码-->
 <script>
 if (!localStorage.bg)
 {localStorage.bg="#f6f1e7";
 localStorage.content="";
-document.getElementById("bg").style.backgroundColor=localStorage.bg;
+document.body.style.backgroundColor=localStorage.bg;
 }
 else
-{document.getElementById("bg").style.backgroundColor=localStorage.bg;
+{document.body.style.backgroundColor=localStorage.bg;
 document.getElementById("content").style.color= localStorage.content;}
+
 function bgc(bgc) {
 localStorage.bg=bgc;
 localStorage.content="";
 document.getElementById("content").style.color="";
-document.getElementById("bg").style.backgroundColor=localStorage.bg;
+document.body.style.backgroundColor=localStorage.bg;
 if(bgc=="#18222d")
 {localStorage.content= "#adadad";
 document.getElementById("content").style.color= localStorage.content;}
   }
 </script>
-<script type="text/javascript" src="read.js"></script>
+
+<!--在body标签结束前引入js-->
+<script src="read.js"></script>
 </body>
 </html>
