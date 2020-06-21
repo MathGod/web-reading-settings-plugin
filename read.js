@@ -57,10 +57,10 @@ document.getElementById("ziti").innerHTML=localStorage.zitiname;
 if (!localStorage.bg)
 {localStorage.bg="#18222d";
 localStorage.content="#adadad";
-document.getElementById("bg").style.backgroundColor=localStorage.bg;
+document.body.style.backgroundColor=localStorage.bg;
 document.getElementById("content").style.color=localStorage.content;}
 else
-{document.getElementById("bg").style.backgroundColor=localStorage.bg;
+{document.body.style.backgroundColor=localStorage.bg;
 document.getElementById("content").style.color= localStorage.content;}
 function bg(){
 if(localStorage.bg=="#ffffff")
@@ -83,7 +83,7 @@ else if(localStorage.bg=="#ebddae")
 localStorage.bg="#dfecf0";
 else
 localStorage.bg="#ffffff";
-document.getElementById("bg").style.backgroundColor=localStorage.bg;
+document.body.style.backgroundColor=localStorage.bg;
 }
 
 //屏宽
@@ -157,3 +157,7 @@ function exitfullscreen() {
     }
  }
 }
+
+
+
+ 
