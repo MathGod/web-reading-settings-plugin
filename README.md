@@ -1,4 +1,4 @@
-### [预览网站](https://mathgod.github.io/web-reading-settings-plugin/)
+# [预览网站](https://mathgod.github.io/web-reading-settings-plugin/)
 
 ### 觉得好用可以加个star，谢谢。
 
